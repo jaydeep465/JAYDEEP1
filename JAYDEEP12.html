@@ -1,0 +1,870 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <!-- Title -->
+    <title>
+	Ahmedabad City Police
+</title><meta content="width=device-width, initial-scale=1" name="viewport" /><meta charset="UTF-8" /><meta name="description" content="E-Challan Ahmedabad" /><meta name="keywords" content="E-Challan,EMemo" /><meta name="author" content="GIPL" />
+    <!-- Styles -->
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css" /><link href="/asset/css/pace-theme-flash.css" rel="stylesheet" /><link href="/asset/css/uniform.default.min.css" rel="stylesheet" /><link href="/asset/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="asset/css/font-awesome.min.css" /><link href="/asset/css/simple-line-icons.css" rel="stylesheet" type="text/css" /><link href="/asset/css/waves.min.css" rel="stylesheet" type="text/css" /><link href="/asset/css/switchery.min.css" rel="stylesheet" type="text/css" /><link href="/asset/css/style.css" rel="stylesheet" type="text/css" /><link href="/asset/css/component.css" rel="stylesheet" type="text/css" /><link href="/asset/css/toastr.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme Styles -->
+    <link href="/asset/css/modern.min.css" rel="stylesheet" type="text/css" /><link href="/asset/css/custom-ahm.css" rel="stylesheet" type="text/css" /><link href="/asset/css/sweetalert.css" rel="stylesheet" type="text/css" />
+    <script src="/asset/js/modernizr.js"></script>
+    <style>
+        .page-inner
+        {
+            width: 100%;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            background-image: url("asset/images/090610-Minneapolis-Traffic-Officer-2.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        /*5.2-Overlay background light*/
+        .overlay-light-alpha-10:before
+        {
+            background: rgba(255, 255, 255, 0.1);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-light-alpha-20:before
+        {
+            background: rgba(255, 255, 255, 0.2);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-light-alpha-30:before
+        {
+            background: rgba(255, 255, 255, 0.3);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-light-alpha-40:before
+        {
+            background: rgba(255, 255, 255, 0.4);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-light-alpha-50:before
+        {
+            background: rgba(255, 255, 255, 0.5);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-light-alpha-60:before
+        {
+            background: rgba(255, 255, 255, 0.6);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-light-alpha-70:before
+        {
+            background: rgba(255, 255, 255, 0.7);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-light-alpha-80:before
+        {
+            background: rgba(255, 255, 255, .1) webkit-linear-gradient(to right, #fff, transparent) repeat scroll 0 0;
+            background: rgba(255, 255, 255, .1) linear-gradient(to right, #fff, transparent) repeat scroll 0 0;
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-light-alpha-90:before
+        {
+            background: rgba(255, 255, 255, 0.9);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        
+        /*5.3-Overlay background black*/
+        .overlay-dark-alpha-10:before
+        {
+            background: rgba(21, 21, 21, 0.1);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-dark-alpha-20:before
+        {
+            background: rgba(21, 21, 21, 0.2);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-dark-alpha-30:before
+        {
+            background: rgba(21, 21, 21, 0.3);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-dark-alpha-40:before
+        {
+            background: rgba(21, 21, 21, 0.4);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-dark-alpha-50:before
+        {
+            background: rgba(21, 21, 21, 0.5);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-dark-alpha-60:before
+        {
+            background: rgba(21, 21, 21, 0.6);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-dark-alpha-70:before
+        {
+            background: rgba(21, 21, 21, 0.7);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-dark-alpha-80:before
+        {
+            background: rgba(21, 21, 21, 0.8);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .overlay-dark-alpha-90:before
+        {
+            background: rgba(21, 21, 21, 0.9);
+            content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .mb-0
+        {
+            margin-bottom: 0;
+        }
+        .home-logo
+        {
+            display: block;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            text-align: LEFT;
+            width: 200px;
+        }
+        .homepage-block-left
+        {
+            margin-bottom:120px;
+        }
+        .homepage-block-left h1
+        {
+            font-size: 35px;
+            color: #444;
+            letter-spacing: -1px;
+        }
+        .homepage-block-left small
+        {
+            color: #555;
+        }
+        .homepage-block-left p
+        {
+            font-size: 14px;
+        }
+        .homepage-block-left .form-control
+        {
+            height: 45px;
+        }
+        .homepage-block-left .btn
+        {
+            font-size: 16px;
+            height: 45px;
+            line-height: 45px;
+            padding: 0 20px;
+        }
+        .innertd
+        {
+            padding-top: 0px;
+        }
+        .panel-footer
+        {
+            border-bottom:1px solid #ddd;
+        }
+        .homepage-block-right {
+    margin-top: -40px;
+    margin-bottom: 60px;
+}
+        .more-less {
+        float: right;
+        color: #fff;
+        font-weight:900;
+    }
+    .divpaid .panel-heading {   
+    padding: 0;
+}
+.divpaid .panel-title > a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+.divpaid tbody > tr > td
+{
+    padding:10px !important;
+    vertical-align:middle;
+    
+}
+.divpaid tbody > tr:nth-of-type(2n) > td
+{
+    border-top:0px !important;
+}
+
+.divpaid tbody > tr > td.innertd
+{
+    padding:5px !important;
+}
+.homepage-block-right .panel-white
+{
+    background:rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+}
+.challan-heading
+{
+    margin-top:30px;
+}
+.challan-heading h2
+{    
+    font-weight:900;
+    font-size:21px;
+    line-height:20px;
+    margin:0;
+}
+.challan-heading h3
+{
+    margin-top:5px;
+}
+.alt-title {
+    font-size: 14px;
+}
+.fw400 {
+    font-weight: 400;
+}
+div.challan-body {
+    background-color: #f8f8f8;
+    border: 1px solid #e1e1e1;
+    margin: 0;
+    overflow: hidden;
+    padding: 25px;
+    position: relative;
+    -webkit-transition: all 0.3s ease;                  
+    -moz-transition: all 0.3s ease;                 
+    -o-transition: all 0.3s ease;   
+    -ms-transition: all 0.3s ease;          
+    transition: all 0.3s ease;
+}
+.challan-body .challan-check {
+    left: -10px;
+    position: relative;
+}
+.challan-check {
+    float: left;
+    height: 105px;
+    line-height: 76px;
+    padding: 10px 8px;
+    text-align: center;
+    width: 81px;
+}
+.challan-date{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.challan-no {
+    
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.challan-inner
+{
+    margin-top:5px;
+    display: table-cell;
+}
+.challan-ru
+{
+    font-size:20px;
+}
+.lbldan {
+    background: #a94442 none repeat scroll 0 0;    
+    color: #fff;
+}
+.lp1
+{
+    margin-bottom:5px;
+}
+.homepage-block-right p
+{
+    margin-bottom:2px;
+}
+.challan-list:hover .challan-body
+{
+    background:#fff;
+    -webkit-transition: all 0.3s ease;                  
+    -moz-transition: all 0.3s ease;                 
+    -o-transition: all 0.3s ease;   
+    -ms-transition: all 0.3s ease;          
+    transition: all 0.3s ease;
+}
+@media (max-width: 767px) 
+{
+.page-inner {
+padding-bottom:0px !important;
+}
+	.page-footer {
+		position:relative;
+	}
+}
+@media (max-width: 480px) 
+{
+    .overlay-light-alpha-80:before {
+        background: rgba(255, 255, 255, 0.9) linear-gradient(to right, #fff, transparent) repeat scroll 0 0;
+    }
+    .home-logo {
+        margin: 0;
+        padding: 0;
+    }
+    .home-logo img
+    {
+        width:90px;
+    }
+    .homepage-block-left h1 { 
+        font-size: 22px; 
+    }
+    div.challan-body {
+        padding: 15px;
+    }
+    .challan-body .challan-check {
+        left: 0;
+        position: relative;
+    }
+    .challan-check {
+        display: block;
+        float: none;
+        height: auto;
+        line-height: 76px;
+        padding: 20px 0;
+        text-align: center;
+        width: auto;
+    }
+    .challan-date,.challan-no {
+        margin-bottom: 10px; 
+    }
+    .challan-inner .input-group {        
+        display: block;        
+    }
+    .panel-footer .amo
+    {
+        font-size:24px !important;
+        padding-right: 0% !important;
+    }
+}
+ </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    
+    <style>
+        .btn-lg2
+        {
+            font-size: 18px;
+            line-height: 25px !important;
+            width: 140px;
+        }
+		.blink_me {
+     animation: blinker 1.7s linear infinite;
+    text-align: center;
+    font-weight: 700;
+	color:red;
+	}
+
+	@keyframes blinker {
+	  50% {
+		opacity: 0;
+	  }
+	}
+    </style>
+</head>
+<body class="page-header-fixed">
+    <div class="overlay">
+    </div>
+    <main class="page-content content-wrap">
+        <div class="page-inner overlay-light-alpha-80">
+            <form method="post" action="./" onsubmit="javascript:return WebForm_OnSubmit();" id="form1" class="clearfix">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE5MDI0OTA4MDgPZBYCZg9kFgICAw9kFgICAQ9kFgQCAw8WAh4FY2xhc3MFHGNvbC1tZC00IGhvbWVwYWdlLWJsb2NrLWxlZnRkAgUPZBYCAgEPFgIeB1Zpc2libGVnFggCAQ8PFgIeBFRleHQFCkdKMDFWTTAwMzVkZAIDDxYCHgtfIUl0ZW1Db3VudAIBFgICAQ9kFhICAQ8QDxYCHgdDaGVja2VkZ2RkZGQCAw8PFgIfAgUKMTgvMDQvMjAyMmRkAgUPDxYCHwIFG0RGTjExNV8yMDIyMDQxODEyMzQzOV80RUI4QWRkAgcPDxYCHwIFAzUwMGRkAgsPDxYCHwFoZGQCDQ8PFgIeB0VuYWJsZWRnZGQCEQ8PFgIfAgUHNzkwMTA5MGRkAhMPDxYCHwIFE1JlZCBMaWdodCBWaW9sYXRpb25kZAIVDw8WAh8CBRVEQUZOQUxBLURBRk5BTEFfUDNfTDFkZAIFDxYEHghkaXNhYmxlZAUIZGlzYWJsZWQfAWcWBAILDw8WAh8CBQM1MDBkZAINDxYCHwFnFgICAw8UKwAFZCgpWFN5c3RlbS5HdWlkLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkkMTZhZmY5MjgtNGQ2NS00ZjUwLWFmODMtYzIzN2RhNDI0YzY0AgEUKwABPCsABAEAZmRkAgkPZBYCAgEPFgIfAwL/////D2QYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFMGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcnB0Tm90aWNlJGN0bDAxJGNoa1BheaY8XT5+m+PpDn11mfRRv7zny/9HdohlWk5JKVqQo/bS" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=ptdjL5ewlY4204T7GDieoQv4zds4K6h3I2tsPqWuCOuttcZ6QyjoXBWdpSH61GAOxqk7BFRsz2bzrw_vo-Wr_B6WGu9OoTO1sgBBDSig7wQ1&amp;t=637729824440000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=kNtlMW-pEWjBD3DKUVyh0SOTh8aNyoqkmqoZsVegrFm1kJKyCprb-MK_W-PwyAsF1uasG3JBPCO2glw6b9F2yw22gCtkP2adsJ3i3ceiqPmwUFXMhcV8PVegcWaPV_xWql7heuNxgOuFJANHpD27DM4Lj8OX9v5YOJakUpOuyAs1&amp;t=ffffffff9e1ed87e" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=-hFKfbbC_yXAGAZJM_UL_csT_v7Rmu7sodr0QhS-IHQ_4DnRGkACt_MuahD6YTkl9zl-3OWyq3nSOKjTCKhyMmOrGc5vh5M_DnrMpJxLY_NdrLXYSnTG-_hT0BLNtv345nV71zPh3NPO6hk60XzjrEp-q5Ld4ataSDYFq8m1du01&amp;t=ffffffff8333b97c" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=7eWKmeyOXAmbbpaXcda3EmwuXfhCi0Vo8s-vaDpOiiYIrLe_Q1fkCP1vGWtGION7Ay9BBm0jqc5wKOQPgZ-EeyDWTHp0Wxe70LWg_e7DxfJC5UBV0fQ2S4nzHKOBrW4gu8CZGHXR8EG0IgcQ883ba0x3ydArQDdVONGWp-n3skOTQPfFdz85crcmJrgJ8zsD0&amp;t=ffffffff8333b97c" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAljr7ALTo4gaZbh2Xx7LKaEG5I12yP+Ggz6F+R8DW1Jx80fuEgtH2WBdB9YI/l4FYuVnZKbv+ATSLPXd3V8jguLYbX1K8p4PSHqsoJ4MCIm+OXsCtpTxYYDgfZDtQo9vKk6xKhjucFeGG1n0D9XGSPi/QunJW8UkeLbzhfH2eRGnQHeBkp4oHXfUR21jSR+tf4fKPtpWq44bK1YTki2QnE8p7bMQ9D+qx/VimOL476lGg==" />
+</div>
+    
+                
+    <div id="main-wrapper" class="container">
+        <div class="row">
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$scriptmanager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+            
+            <div id="ContentPlaceHolder1_homepageblockleft" class="col-md-4 homepage-block-left">
+                <div class="home-logo">
+<!--                    <a href="index.html" class="logo-text">
+                        </a> -->
+<img src="asset/images/logo-.png" alt="" />
+                </div>
+                <h1 class="m-b-md">
+                    Welcome to Ahmedabad Traffic Police, Challan payment system</h1>
+                <p class="m-b-lg">
+                    Protection and safety of the citizens of Ahmedabad having population about more
+                    than 60 lakh is the prime responsibility of Ahmedabad City Police Force.
+                    <br />
+                    <strong>Please insert your Vehicle no. below</strong></p>
+                <div class="" style="">
+                    <div id="ContentPlaceHolder1_divlicense" class="panel panel-purple mb-0">
+                        <div class="panel-body">
+                            <div class="input-group">
+                                <input name="ctl00$ContentPlaceHolder1$txtVehicleNo" maxlength="10" id="ContentPlaceHolder1_txtVehicleNo" class="form-control" type="text" placeholder="GJ01XX1234" style="font-size:Larger;" />
+                                <span class="input-group-btn">
+                                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value=" Go !" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;, &quot;&quot;, true, &quot;save&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_btnSubmit" class="btn btn-warning" />
+                                </span>
+								<input type="hidden" name="ctl00$ContentPlaceHolder1$hdfTxn" id="ContentPlaceHolder1_hdfTxn" value="500" />
+                            </div>
+                            <span id="ContentPlaceHolder1_rfvVehicleNo" style="color:Yellow;display:none;">Please Enter Vehicle No.</span>
+                        </div>
+                    </div>
+                </div>
+				<div style="display: block;	position: relative;	margin: 40px 0 0 0;	font-size: 16px;	
+				font-weight: 700;	text-decoration: underline;	">	
+				<a href="https://www.youtube.com/watch?v=M9HSKoG0Pzk" target="_blank" style="margin-top:20px;">	
+				How to pay online e-challan - Video	</a>	
+		</div>
+            </div>
+            <div id="ContentPlaceHolder1_homepageblockright" class="col-md-8 homepage-block-right ">
+                <div id="ContentPlaceHolder1_datablock" class="panel panel-white full-height">
+                   <div class="alert alert-info" role="alert"  style="margin-bottom:0" >
+                     <p><div class="blink_me">
+				   
+                      <strong>Note</strong> :  If challan amount deducted from your Bank account and challan showing unpaid, then please wait at least for 4 hours before paying again
+						<br/>
+                       <strong>નોંધ</strong>: તમારા બેંક ખાતામાંથી ચલણની રકમ કપાત થઇ ગઇ હોય પણ ચલણ ચૂકવણી બાકી મા દર્શાવતી હોય, તો કૃપા કરીને ફરી ચૂકવણી કરતા પહેલા 4 કલાક માટે રાહ જુઓ          
+					</strong>
+					</div></p>
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        <strong>Declaimer</strong> : You may see some Challan as unpaid even if it is paid
+                        at police station in offline mode. Kindly confirm the notice number in receipt and
+                        don't select those Challan while making payment.
+                    </div>
+   
+                    <div class="challan-heading text-center">
+                        <hgroup>
+                            <h2 class="">
+                                <span id="ContentPlaceHolder1_lblVehicleNo">GJ01VM0035</span></h2>
+                            <h3 class="alt-title fw400 uppercase">
+                                VEHICLE CHALLAN DETAILS</h3>
+                        </hgroup>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <div class="panel panel-success mb-0">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    Unpaid Challans Details</h3>
+                            </div>
+                        </div>
+                        <div class="divpaid">
+                        
+                            
+                                
+                                    <div style="margin-bottom: 0px;">
+                                        
+                                    </div>
+                                
+                                    <section class="challan-list">
+                                        <div class="challan-body clearfix">
+                                            <div class="lp1 elements">
+                                                <span class="challan-check">
+                                                    <input id="ContentPlaceHolder1_rptNotice_chkPay_0" type="checkbox" name="ctl00$ContentPlaceHolder1$rptNotice$ctl01$chkPay" checked="checked" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rptNotice$ctl01$chkPay\&#39;,\&#39;\&#39;)&#39;, 0)" />
+                                                </span>
+                                                <div class="challan-date">
+                                                    <i class="fa fa-calendar"></i>
+                                                    <span id="ContentPlaceHolder1_rptNotice_lblNoticeDate_0">18/04/2022</span>
+                                                </div>
+                                                <div class="challan-no">
+                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>Notice Number:
+                                                    <span id="ContentPlaceHolder1_rptNotice_lblNoticeNo_0">DFN115_20220418123439_4EB8A</span>
+                                                </div>
+                                                <div class="challan-no challan-ru float-right text-success">
+                                                    <i class="fa fa-inr" aria-hidden="true"></i>
+                                                    <span id="ContentPlaceHolder1_rptNotice_lblAmount_0">500</span>
+                                                </div>
+                                            </div>
+                                            <div class="challan-inner">
+                                                <div>
+                                                    <div class="input-group mb-0">
+                                                        <span class="input-group-addon" id="basic-addon1"><font color="red">*</font>License
+                                                            No.</span>
+                                                        <input name="ctl00$ContentPlaceHolder1$rptNotice$ctl01$txtlicense" type="text" maxlength="20" id="ContentPlaceHolder1_rptNotice_txtlicense_0" class="form-control" placeholder="GJ0112345601" />
+                                                        
+                                                    </div>
+                                                    <div id="rfv">
+                                                        <span id="ContentPlaceHolder1_rptNotice_rfvlicense_0" style="color:Red;display:none;">Please Enter License No.</span>
+                                                        <span id="ContentPlaceHolder1_rptNotice_RglrExpPlicense_0" style="color:Red;display:none;">Enter Valid License No.</span>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    
+                                                </p>
+                                                <p>
+                                                    <strong>Violation Type:</strong>
+                                                    <span id="ContentPlaceHolder1_rptNotice_lblViolationType_0">Red Light Violation</span>
+                                                </p>
+                                                <p>
+                                                    <strong>Place:</strong>
+                                                    <span id="ContentPlaceHolder1_rptNotice_lblPlace_0">DAFNALA-DAFNALA_P3_L1</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                
+                                    </tbody> </table>
+                                
+                        </div>
+                        <div id="ContentPlaceHolder1_divPayment" class="form-horizontal" disabled="disabled">
+                            <div class="panel panel-white mb-0" style="box-shadow: none; -webkit-box-shadow: none;
+                                border: 0 solid #e9e9e9 !important">
+                                <div class="panel-heading" style="background: rgba(21,21,21,.12) !important">
+                                    <h3 class="panel-title">
+                                        Please fill below detail to make payment</h3>
+                                </div>
+                                <div class="panel-body panel-body m-t-lg">
+                                    <div class="form-group clearfix">
+                                        <div class="col-sm-2 control-label">
+                                            <font color="red">*</font>Mobile No:
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input name="ctl00$ContentPlaceHolder1$txtMobileNo" maxlength="10" id="ContentPlaceHolder1_txtMobileNo" class="form-control" type="text" placeholder="Please Enter Your Mobile No." />
+                                            <span id="ContentPlaceHolder1_rfvmobno" style="color:Red;display:none;">Please Enter Mobile No.</span>
+                                            <span id="ContentPlaceHolder1_RxvMobile" style="color:Red;display:none;">Invalid Mobile Number</span>
+                                        </div>
+                                        <div class="col-sm-2 control-label">
+                                            Email ID:
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input name="ctl00$ContentPlaceHolder1$txtEmailId" maxlength="100" id="ContentPlaceHolder1_txtEmailId" class="form-control" type="text" placeholder="Please Enter Your Email Id." />
+                                            
+                                            <span id="ContentPlaceHolder1_RglrexpEmail" style="color:Red;display:none;">Enter Correct EmailId</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer clearfix"><p><div class="blink_me">										
+										<strong>નોંધ</strong>: તમારા બેંક ખાતામાંથી ચલણની રકમ કપાત થઇ ગઇ હોય પણ ચલણ ચૂકવણી બાકી મા દર્શાવતી હોય, તો કૃપા કરીને ફરી ચૂકવણી કરતા પહેલા 4 કલાક માટે રાહ જુઓ          
+										</strong>
+									</div></p>
+                                    <div class="col-lg-9 col-sm-6 text-right">
+                                        <label class="text-danger amo" style="font-size: 30px; padding-right: 2%" class="font18">
+                                            Total : <i class="fa fa-inr" aria-hidden="true"></i>
+                                            <span id="ContentPlaceHolder1_lblTotalAmount">500</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6 text-right">
+                                        <div id="ContentPlaceHolder1_divPayBtn" class="">
+                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnPaynow" value=" Pay now " onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnPaynow&quot;, &quot;&quot;, true, &quot;pay&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_btnPaynow" class="btn btn-danger btn-addon  btn-lg2 font18" />
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Main Wrapper -->
+
+    
+            
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ContentPlaceHolder1_rfvVehicleNo"), document.getElementById("ContentPlaceHolder1_rptNotice_rfvlicense_0"), document.getElementById("ContentPlaceHolder1_rptNotice_RglrExpPlicense_0"), document.getElementById("ContentPlaceHolder1_rfvmobno"), document.getElementById("ContentPlaceHolder1_RxvMobile"), document.getElementById("ContentPlaceHolder1_RglrexpEmail"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ContentPlaceHolder1_rfvVehicleNo = document.all ? document.all["ContentPlaceHolder1_rfvVehicleNo"] : document.getElementById("ContentPlaceHolder1_rfvVehicleNo");
+ContentPlaceHolder1_rfvVehicleNo.controltovalidate = "ContentPlaceHolder1_txtVehicleNo";
+ContentPlaceHolder1_rfvVehicleNo.errormessage = "Please Enter Vehicle No.";
+ContentPlaceHolder1_rfvVehicleNo.display = "Dynamic";
+ContentPlaceHolder1_rfvVehicleNo.validationGroup = "save";
+ContentPlaceHolder1_rfvVehicleNo.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_rfvVehicleNo.initialvalue = "";
+var ContentPlaceHolder1_rptNotice_rfvlicense_0 = document.all ? document.all["ContentPlaceHolder1_rptNotice_rfvlicense_0"] : document.getElementById("ContentPlaceHolder1_rptNotice_rfvlicense_0");
+ContentPlaceHolder1_rptNotice_rfvlicense_0.controltovalidate = "ContentPlaceHolder1_rptNotice_txtlicense_0";
+ContentPlaceHolder1_rptNotice_rfvlicense_0.errormessage = "Please Enter License No.";
+ContentPlaceHolder1_rptNotice_rfvlicense_0.display = "Dynamic";
+ContentPlaceHolder1_rptNotice_rfvlicense_0.validationGroup = "pay";
+ContentPlaceHolder1_rptNotice_rfvlicense_0.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_rptNotice_rfvlicense_0.initialvalue = "";
+var ContentPlaceHolder1_rptNotice_RglrExpPlicense_0 = document.all ? document.all["ContentPlaceHolder1_rptNotice_RglrExpPlicense_0"] : document.getElementById("ContentPlaceHolder1_rptNotice_RglrExpPlicense_0");
+ContentPlaceHolder1_rptNotice_RglrExpPlicense_0.controltovalidate = "ContentPlaceHolder1_rptNotice_txtlicense_0";
+ContentPlaceHolder1_rptNotice_RglrExpPlicense_0.errormessage = "Enter Valid License No.";
+ContentPlaceHolder1_rptNotice_RglrExpPlicense_0.display = "Dynamic";
+ContentPlaceHolder1_rptNotice_RglrExpPlicense_0.validationGroup = "save";
+ContentPlaceHolder1_rptNotice_RglrExpPlicense_0.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ContentPlaceHolder1_rptNotice_RglrExpPlicense_0.validationexpression = "^[A-Za-z0-9]+$";
+var ContentPlaceHolder1_rfvmobno = document.all ? document.all["ContentPlaceHolder1_rfvmobno"] : document.getElementById("ContentPlaceHolder1_rfvmobno");
+ContentPlaceHolder1_rfvmobno.controltovalidate = "ContentPlaceHolder1_txtMobileNo";
+ContentPlaceHolder1_rfvmobno.errormessage = "Please Enter Mobile No.";
+ContentPlaceHolder1_rfvmobno.display = "Dynamic";
+ContentPlaceHolder1_rfvmobno.validationGroup = "pay";
+ContentPlaceHolder1_rfvmobno.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_rfvmobno.initialvalue = "";
+var ContentPlaceHolder1_RxvMobile = document.all ? document.all["ContentPlaceHolder1_RxvMobile"] : document.getElementById("ContentPlaceHolder1_RxvMobile");
+ContentPlaceHolder1_RxvMobile.controltovalidate = "ContentPlaceHolder1_txtMobileNo";
+ContentPlaceHolder1_RxvMobile.errormessage = "Invalid Mobile Number";
+ContentPlaceHolder1_RxvMobile.display = "Dynamic";
+ContentPlaceHolder1_RxvMobile.validationGroup = "pay";
+ContentPlaceHolder1_RxvMobile.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ContentPlaceHolder1_RxvMobile.validationexpression = "^([6-9]{1})([0-9]{9})$";
+var ContentPlaceHolder1_RglrexpEmail = document.all ? document.all["ContentPlaceHolder1_RglrexpEmail"] : document.getElementById("ContentPlaceHolder1_RglrexpEmail");
+ContentPlaceHolder1_RglrexpEmail.controltovalidate = "ContentPlaceHolder1_txtEmailId";
+ContentPlaceHolder1_RglrexpEmail.errormessage = "Enter Correct EmailId";
+ContentPlaceHolder1_RglrexpEmail.display = "Dynamic";
+ContentPlaceHolder1_RglrexpEmail.validationGroup = "pay";
+ContentPlaceHolder1_RglrexpEmail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ContentPlaceHolder1_RglrexpEmail.validationexpression = "^\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('ContentPlaceHolder1_rfvVehicleNo').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_rfvVehicleNo'));
+}
+
+document.getElementById('ContentPlaceHolder1_rptNotice_rfvlicense_0').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_rptNotice_rfvlicense_0'));
+}
+
+document.getElementById('ContentPlaceHolder1_rptNotice_RglrExpPlicense_0').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_rptNotice_RglrExpPlicense_0'));
+}
+
+document.getElementById('ContentPlaceHolder1_rfvmobno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_rfvmobno'));
+}
+
+document.getElementById('ContentPlaceHolder1_RxvMobile').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RxvMobile'));
+}
+
+document.getElementById('ContentPlaceHolder1_RglrexpEmail').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RglrexpEmail'));
+}
+//]]>
+</script>
+</form>
+                      <div class="page-footer">
+                <div class="container">
+                    <p class="no-s">2022 @ Ahmedabad City Police.</p>
+
+                    <a href="https://payahmedabadechallan.org/admin/login.aspx"> Police Officer Login </a> &nbsp;&nbsp;&nbsp;  ||&nbsp;&nbsp;&nbsp;
+
+                    
+                    <a href="https://payahmedabadechallan.org/pdfs/Heavy Vehicle No-Entry-min.pdf"> Heavy Vehicle No-Entry   </a>&nbsp;&nbsp;&nbsp; ||&nbsp;&nbsp;&nbsp;
+                    <a href="https://payahmedabadechallan.org/pdfs/Iskon One Way-min.pdf">Iskon One Way   </a> &nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;
+                    <a href="https://payahmedabadechallan.org/pdfs/Pakwan Cross Road No-Right Turn-min.pdf"> Pakwan Cross Road No-Right Turn   </a> &nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;
+                    <a href="https://payahmedabadechallan.org/pdfs/NOTIFICATION_COMPOUNDING FEE_FINAL.pdf"> Notification Compounding Fees </a> &nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;
+                    <a href="https://payahmedabadechallan.org/pdfs/TowingCharges.pdf"> Towing Charges   </a> 
+                </div>
+            </div>
+        </div><!-- Page Inner -->
+    </main>
+    <!-- Page Content -->
+    <!-- Javascripts -->
+    <script src="/asset/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="/asset/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/asset/js/pace.min.js" type="text/javascript"></script>
+    <script src="/asset/js/jquery.blockui.js" type="text/javascript"></script>
+    <script src="/asset/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/asset/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="/asset/js/switchery.min.js" type="text/javascript"></script>
+    <script src="/asset/js/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="/asset/js/classie.js" type="text/javascript"></script>
+    <script src="/asset/js/waves.min.js" type="text/javascript"></script>
+    <script src="/asset/js/main.js" type="text/javascript"></script>
+    <script src="/asset/js/jquery.waypoints.min.js" type="text/javascript"></script>
+    <script src="/asset/js/toastr.min.js" type="text/javascript"></script>
+    <script src="/asset/js/modern.js" type="text/javascript"></script>
+    
+    <script src="/asset/js/sweetalert.min.js" type="text/javascript"></script>
+    <script src="/asset/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    
+    <script>
+        function toggleIcon(e) {
+            $(e.target)
+        .prev('.panel-heading')
+        .find(".more-less")
+        .toggleClass('glyphicon-plus glyphicon-minus');
+        }
+        $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+        $('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+        $('tr[data-group]').on('hover', function () {
+            alert('asdf');
+            var t = $(this);
+            t.siblings("[data-group=" + t.attr('data-group') + "]").toggleClass('hover');
+        });
+       
+    </script>
+</body>
+</html>
